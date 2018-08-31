@@ -1,0 +1,8 @@
+<% if resource.persisted? %>
+	$('.registration-success').append("You are successfully registered to our platform. Page will refresh in 5 seconds")
+	setTimeout(function() { window.location='/';},5000);
+<% else %>
+	<% resource.errors.each do |field, error| %>
+		$("#<%= field %>_error").html("<%= error %>")
+	<% end %>
+<% end %>
