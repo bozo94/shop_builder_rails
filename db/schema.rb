@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_31_220228) do
+ActiveRecord::Schema.define(version: 2018_09_01_172134) do
 
   create_table "shops", force: :cascade do |t|
     t.string "shop_name"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(version: 2018_08_31_220228) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string "city"
+    t.string "country"
+    t.string "twitter_url"
+    t.string "website"
+    t.text "about_me"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

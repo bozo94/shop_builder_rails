@@ -1,0 +1,9 @@
+<% if resource.errors.any? %>
+	<% resource.errors.each do |field, error| %>
+		$(".<%= field %>_error").html("<%= error %>")
+	<% end %>
+<% else %>
+	scrollToTop()
+	$(".acc-info-updated-message").html("You have updated your basic data")	
+	setTimeout(function() {$(".acc-info-updated-message").empty();}, 5000);
+<% end %>
