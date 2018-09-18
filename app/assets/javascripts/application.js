@@ -13,4 +13,12 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery3
+//= require popper
+//= require bootstrap
 //= require_tree .
+    
+function scrollToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}

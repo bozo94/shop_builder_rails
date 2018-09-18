@@ -1,0 +1,5 @@
+$('.sign-in-message').empty()
+$('.sign-in-message').removeClass('text-danger')
+$('.sign-in-message').addClass('text-success')
+$('.sign-in-message').html("You are logged in, page will refresh in 5 seconds.")
+setTimeout(function() { window.location='/'},5000);

@@ -1,0 +1,105 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'row' }, remote: true, format: :js) do |f| %>
+    <div class="col-12">
+        <div class="form-group">
+            <label for="first-name">Full Name:
+                <span class="error text-red name_error">*</span>
+            </label>
+            <%= f.text_field :name, autofocus: true, class: 'form-control form-control-lg' %>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="form-group">
+            <label for="emailaddress">Email Address:
+                <span class="error text-red email_error">*</span>
+            </label>
+            <%= f.email_field :email, autofocus: true, class: 'form-control form-control-lg' %>
+            <small>Used to log in to your account</small>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            <label for="first-name">Password:
+                <span class="error text-red password_error">*</span>
+            </label>
+             <%= f.password_field :password, autocomplete: "new-password", class: "form-control form-control-lg" %>
+            <small>leave blank if you don't want to change it</small>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            <label for="last-name">Password confirmation
+                <span class="error text-red password_confirmation_error">*</span>
+            </label>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control form-control-lg" %>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="form-group">
+            <label for="city">City:
+                <span class="error text-red city_error">*</span>
+            </label>
+            <%= f.text_field :city, class: 'form-control form-control-lg' %>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            <label for="country">Country:
+                <span class="error text-red country_error">*</span>
+            </label>
+            <%= f.text_field :country, class: 'form-control form-control-lg' %>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="form-group">
+            <label for="website">Website:
+                <span class="error text-red website_error">*</span>
+            </label>
+            <%= f.text_field :website, class: 'form-control form-control-lg' %>
+            <small>This will be displayed on your public profile</small>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="form-group">
+            <label for="twitter">Twitter Handle:
+                <span class="error text-red twitter_url_error">*</span>
+            </label>
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">@</span>
+                </div>
+                <%= f.text_field :twitter_url, class: 'form-control form-control-lg' %>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="form-group">
+            <label for="about-me">About me:
+                <span class="error text-red about_me_error">*</span>
+            </label>
+            <%= f.text_area :about_me, class: 'form-control form-control-lg', rows: 4 %>
+        </div>
+    </div>
+     <div class="col-12">
+        <div class="form-group">
+            <label for="emailaddress">Current Password:
+                <span class="error text-red current_password_error">*</span>
+            </label>
+            <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control form-control-lg" %>
+            <small>Must be provided in order to update your account data</small>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="form-group">
+            <div class="custom-control custom-checkbox custom-checkbox-switch">
+                <input type="checkbox" class="custom-control-input" name="profilePublic" id="public" />
+                <label class="custom-control-label" for="public">Make my profile public</label>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="form-group">
+            <button class="btn btn-secondary" type="submit">Save changes</button>
+        </div>
+    </div>
+<% end %>

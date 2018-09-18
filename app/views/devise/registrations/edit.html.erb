@@ -1,0 +1,150 @@
+ <div class="nav-container">
+    <div class="main-container">
+        <section class="bg-white space-sm pb-4">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-auto">
+                        <h1 class="h2">Account Settings</h1>
+                    </div>
+                    <!--end of col-->
+                    <div class="col-auto text-right">
+                        <a href="#" class="btn btn-success">Upgrade to Pro</a>
+                    </div>
+                    <!--end of col-->
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+        <!--end of section-->
+        <section class="flush-with-above space-0">
+            <div class="bg-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="overview-tab" data-toggle="tab" href="#general" role="tab" aria-controls="general" aria-selected="true">General</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="billing-tab" data-toggle="tab" href="#billing" role="tab" aria-controls="billing" aria-selected="false">Billing</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--end of col-->
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </div>
+        </section>
+        <section class="flush-with-above height-80 d-block">
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                    <div class="container">
+                        <div class="row mb-4">
+                            <div class="col">
+                                <h5>Account Details</h5>
+                            </div>
+                            <!--end of col-->
+                        </div>
+                        <!--end of row-->
+                        <div class="row">
+                            <div class="col-12 col-md-4 order-md-2">
+                                <div class="alert alert-info text-small" role="alert">
+                                    <i class="fa fa-info"></i>
+                                    <span>
+                                        Your information is always kept encrypted and can never be accessed by third parties.
+                                    </span>
+                                    <a href="#">See our privacy policy</a>
+                                </div>
+                            </div>
+                            <!--end of col-->
+                            <div class="col-12 col-md-8 order-md-1">
+                                <h2 class="acc-info-updated-message text-green"></h2>
+                                <%= render 'edit_profile' %>
+                            </div>
+                            <!--end of col-->
+                        </div>
+                        <!--end of row-->
+                    </div>
+                    <!--end of container-->
+                </div>
+                <!--end of tab pane-->
+                <div class="tab-pane fade" id="billing" role="tabpanel" arialabelledby="billing-tab">
+                    <div class="container">
+                        <div class="row mb-4">
+                            <div class="col">
+                                <h5>Payment Methods</h5>
+                            </div>
+                            <!--end of col-->
+                        </div>
+                        <!--end of row-->
+                        <div class="row">
+                            <div class="col-12">
+                                <form>
+                                    <table class="table align-items-center">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Card Type</th>
+                                                <th scope="col">Card Number</th>
+                                                <th scope="col">Default Payment Method</th>
+                                                <th scope="col">Remove</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">
+                                                    <img alt="Image" src="/assets/logo-payment-visa.svg" class="avatar avatar-sm" />
+                                                </th>
+                                                <td>
+                                                    <span class="d-block">&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 8372</span>
+                                                    <small class="text-muted">Exp: 06/22</small>
+                                                </td>
+                                                <td>
+                                                    <div class="custom-control custom-radio">
+                                                        <input id="radio1" name="payment-default" type="radio" class="custom-control-input" checked />
+                                                        <label class="custom-control-label" for="radio1"></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove card</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <img alt="Image" src="/assets/logo-payment-amex.svg" class="avatar avatar-sm avatar-square" />
+                                                </th>
+                                                <td>
+                                                    <span class="d-block">&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 1225</span>
+                                                    <small class="text-muted">Exp: 07/21</small>
+                                                </td>
+                                                <td>
+                                                    <div class="custom-control custom-radio">
+                                                        <input id="radio2" name="payment-default" type="radio" class="custom-control-input">
+                                                        <label class="custom-control-label" for="radio2"></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove card</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <button class="btn btn-success">Add new card</button>
+                                </form>
+                            </div>
+                            <!--end of col-->
+                        </div>
+                        <!--end of row-->
+                    </div>
+                    <!--end of container-->
+                </div>
+                <!--end of tab pane-->
+            </div>
+            <!--end of tabs content-->
+        </section>
+        <!--end of section-->
+    </div>
+</div>
+
